@@ -58,7 +58,7 @@ for file in glob.glob("*_territories.xml"):
 
             # Check if the x and z coords (including max radius) are within given distance of the position
             if (x - args.dist[0] - r < args.pos[0] < x + args.dist[0]) and (z - args.dist[2] < args.pos[2] < z + args.dist[2] + r): 
-                print("[ {:.1f} | {:.1f} ]\tLine: ".format(args.pos[0] - x, args.pos[2] - z), i, line)
+                print("[ {:.1f} | {:.1f} ]\tLine: ".format(args.pos[0] - x, args.pos[2] - z), i + 1, line)
 
 # Example line from XML file:
 # <group name="Land_Misc_Greenhouse" pos="219.782394 105.123093 2387.034180" rpy="-0.000000 0.000000 27.977058" a="62.022938" />
@@ -83,4 +83,4 @@ for file in glob.glob("mapgrouppos.xml"):
 
             # Check if the x, y, z coords are within given distance of the given position
             if (x - args.dist[0] < args.pos[0] < x + args.dist[0]) and (y - args.dist[1] < args.pos[1] < y + args.dist[1]) and (z - args.dist[2] < args.pos[2] < z + args.dist[2]): 
-                print("[ {:.1f} | {:.1f} | {:.1f} ]\tLine: ".format(args.pos[0] - x, args.pos[1] - y, args.pos[2] - z), i, line)
+                print("[ {:.1f} | {:.1f} | {:.1f} ]\tLine: ".format(args.pos[0] - x, args.pos[1] - y, args.pos[2] - z), i + 1, line)
